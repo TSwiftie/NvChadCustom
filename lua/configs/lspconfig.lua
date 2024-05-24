@@ -56,3 +56,24 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+lspconfig.clangd.setup {
+  on_attach = on_attach,
+  -- on_init = on_init,
+  capabilities = capabilities,
+  single_file_support = true,
+  cmd = {
+    "clangd",
+    "--enable-config",
+    "--background-index",
+    "--pch-storage=memory",
+    "--pretty",
+    "--clang-tidy",
+    "--all-scopes-completion",
+    "--completion-style=detailed",
+    "--header-insertion-decorators",
+    "--header-insertion=never",
+    "--limit-references=0",
+    "--limit-results=0",
+  }
+}

@@ -46,7 +46,7 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 require("neodev").setup {}
 
 local lspconfig = require "lspconfig"
-local servers = { "lua_ls", "clangd", "rust_analyzer" }
+local servers = { "lua_ls", "clangd", "rust_analyzer", "pylsp" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do

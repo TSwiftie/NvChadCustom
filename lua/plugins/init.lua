@@ -89,7 +89,18 @@ return {
     "nvimdev/lspsaga.nvim",
     event = "LspAttach",
     config = function()
-      require("lspsaga").setup {}
+      require("lspsaga").setup {
+        definition = {
+          keys = {
+            edit = "<C-c>o",
+            vsplit = "<C-c>v",
+            split = "<C-c>i",
+            tabe = "<C-c>t",
+            quit = "q",
+            close = "<C-c>k",
+          },
+        },
+      }
     end,
     dependencies = {
       "nvim-treesitter/nvim-treesitter", -- optional

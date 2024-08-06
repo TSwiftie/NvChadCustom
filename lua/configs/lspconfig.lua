@@ -1,5 +1,5 @@
 local map = vim.keymap.set
-local conf = require("nvconfig").ui.lsp
+local conf = require("nvconfig").lsp
 -- local on_attach = require("nvchad.configs.lspconfig").on_attach
 -- custom on_attach function
 local on_attach = function(client, bufnr)
